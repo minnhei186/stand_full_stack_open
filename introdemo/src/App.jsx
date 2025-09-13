@@ -1,27 +1,17 @@
 import Header from './Header.jsx'
+import Content from './Content.jsx'
+import Total from './Total.jsx'
 
 const App = () => {
-  const course = 'Half Stack application development'
-  const part1 ='Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a coponent'
-  const exercises3 = 14
-
+   const course = 'Half Stack application development'
+   const part1 = { text: 'Fundamentals of React', exercise: 10}
+   const part2 = { text: 'Using props to pass data' , exercise: 7}
+   const part3 = { text: 'State of a component', exercise: 14}
 return (
   <div>
-    <Header text={course}/>
-    <p>
-      {part1} {exercises1}
-    </p>
-    <p>
-      {part2} {exercises2}
-    </p>
-    <p>
-      {part3} {exercises3}
-    </p>
-    <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    <Header text={course} />
+    <Content part1={part1} part2={part2} part3={part3}/>
+    <Total x={part1.exercise} y={part2.exercise} z={part3.exercise} />
   </div>
 )
 }
