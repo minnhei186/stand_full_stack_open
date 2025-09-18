@@ -6,11 +6,14 @@ const App = () => {
   //const handleClick = () => {
   //  console.log('clicked')
   //}
+  const increaseByone = () => setCounter(counter + 1)
+  const setToZero = () => setCounter(0)
+
   return (
     <>
     <div>{counter}</div>
-    <button onClick={() => setCounter(counter+1)}>plus</button>
-    <button onClick={() => setCounter(0)}>reset</button>
+    <button onClick={increaseByone}>plus</button>
+    <button onClick={setToZero}>reset</button>
     </>
   )
 }
