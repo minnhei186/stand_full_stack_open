@@ -15,8 +15,8 @@ const History = (props) => {
   )
 }
 
-const Button = ({ onClick, text }) => (
-  <button onClick={onClick}>{text}</button>
+const Button = (props) => (
+  <button onClick={props.onClick}>{props.text}</button>
 )
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div>
       {value}
-      <button onClick={() => setToValue(value+1)}>button</button>
+      <Button onClick={() => setToValue(1000)} text="thousand" />
     </div>
   )
 }
