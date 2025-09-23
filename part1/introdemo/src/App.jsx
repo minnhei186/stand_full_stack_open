@@ -22,15 +22,15 @@ const Button = ({ onClick, text }) => (
 const App = () => {
   const [value, setValue] = useState(10)
 
-  const hello = () => {
-    const handler = () => console.log('hello world')
-    return handler
+  const setToValue = (newValue) => () => {
+    console.log('value now', newValue)
+    setValue(newValue)
   }
 
   return (
     <div>
       {value}
-      <button onClick={hello()}>button</button>
+      <button onClick={setToValue(value+1)}>button</button>
     </div>
   )
 }
