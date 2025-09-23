@@ -1,15 +1,15 @@
 
-const App = (props) => {
-  const { notes } = props
+const Note = (nota) => <li key={nota.id}>{nota.content}</li>
 
+const App = ({ notes }) => {
   return (
     <div>
       <h1>Notes</h1>
       <ul>
-        {notes.map((note) =>
-          <li key={note.id}>
-            {note.content}
-          </li>)}
+        {notes.map((note) =>(
+          <Note nota={note} />
+        ))
+        }
       </ul>
     </div>
   )
