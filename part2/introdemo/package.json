@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server -p 3001 db.json",
+    "run": "npm run dev"
   },
   "dependencies": {
     "axios": "^1.12.2",
