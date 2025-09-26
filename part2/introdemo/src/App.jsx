@@ -41,7 +41,7 @@ const App = () => {
   }
 
   const toggleImportanceOf = (id) => {
-    console.log('importance of ' + id + ' needs to be toggled')
+    console.log(`importance of ${id} needs to be toggled`)
   }
 
   const notesToshow = showAll ? notes : notes.filter(note => note.important === true)
