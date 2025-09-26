@@ -8,7 +8,8 @@
     {
       "id": "2",
       "content": "Browser can execute only JavaScript",
-      "important": false
+      "important": false,
+      "import": true
     },
     {
       "id": "3",
@@ -23,17 +24,20 @@
     {
       "id": "e57a",
       "content": "aafe",
-      "important": false
+      "important": true,
+      "import": true
     },
     {
       "id": "a74e",
       "content": "aaa",
-      "important": true
+      "important": true,
+      "import": false
     },
     {
       "id": "296c",
       "content": "aaaaa",
-      "important": true
+      "important": false,
+      "import": false
     },
     {
       "id": "fbec",
@@ -43,12 +47,13 @@
     {
       "id": "6bc5",
       "content": "a",
-      "important": true
+      "important": false
     },
     {
       "id": "9435",
       "content": "a",
-      "important": false
+      "important": true,
+      "import": true
     }
   ]
 }
