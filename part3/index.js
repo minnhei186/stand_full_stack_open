@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+//appオブジェクトのuseメソッドでパースのためのjsonパースを用意する
+app.use(express.json())
 
 let notes = [
     {
@@ -25,6 +27,12 @@ app.get('/', (reques, response) => {
 
 app.get('/api/notes', (request, response) => {
     response.json(notes)
+})
+
+app.post('/api/notes', (request, response) => {
+    const note = request.body
+    console.log(note)
+    response.json(note)
 })
 
 app.get('/api/notes/:id', (request, response) => {
