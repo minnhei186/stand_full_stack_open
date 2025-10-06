@@ -50,7 +50,9 @@ const App = () => {
     .then(returnedNote => {
       setNotes(notes.map(note => note.id === id ? returnedNote : note))
     })
-    console.log(`importance of ${id} needs to be toggled`)
+    .catch(error => {
+      alert
+    })
   }
 
   const notesToshow = showAll ? notes : notes.filter(note => note.important === true)
