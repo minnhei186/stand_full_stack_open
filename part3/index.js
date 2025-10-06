@@ -1,6 +1,8 @@
 const express = require('express')
+const cors = require('cors')
+
 const app = express()
-//appオブジェクトのuseメソッドでパースのためのjsonパースを用意する
+app.use(cors())
 app.use(express.json())
 
 let notes = [
