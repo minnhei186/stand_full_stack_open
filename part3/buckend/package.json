@@ -6,15 +6,14 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "build:ui": "rm -rf dist && cd ../frontend && npm ci && npm run build && cp -r dist ../backend",
+    "build:ui": "rm -rf dist && cd ../frontend && npm ci && npm run build && cp -r dist ../buckend",
     "deploy": "gcloud run deploy my-service --source . --region=asia-northeast1 --allow-unauthenticated",
-    "deploy:full":"npm run build:ui && npm run deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
     "test": "echo \\\"Error: no test specified\\\" && exit 1\""
   },
   "author": "Matti Luukkainen",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.21.2"
   }
 }
